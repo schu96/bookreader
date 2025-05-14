@@ -1,6 +1,6 @@
 /* global BookReader */
 
-import { UrlPlugin } from "./UrlPlugin";
+import { UrlPlugin } from "./UrlPlugin.js";
 
 /**
  * Plugin for URL management in BookReader
@@ -106,7 +106,7 @@ BookReader.prototype.urlStartLocationPolling = function() {
     this.trigger(BookReader.eventNames.stop);
     if (this.animating) {
       // Queue change if animating
-      if (this.autoStop) this.autoStop();
+      this._plugins.autoplay?.stop();
       this.animationFinishedCallback = updateParams;
     } else {
       // update immediately

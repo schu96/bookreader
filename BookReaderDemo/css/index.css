@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-  
+
   html,
   body {
     height: 100%;
@@ -9,11 +9,11 @@
     font-size: 18px;
     font-family: Optima, Helvetica, Arial;
   }
-  
+
   body {
     padding: 1rem;
   }
-  
+
   .app {
     padding: 1rem;
     display: grid;
@@ -24,25 +24,25 @@
     max-width: 1024px;
     margin: 1em auto;
   }
-  
+
   @media screen and (max-width: 640px) {
     .app {
       grid: "from from" auto "status swap" auto "to to" auto / 1fr;
     }
   }
-  
+
   .panel {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-gap: 1rem;
   }
-  
+
   label {
     padding: 0 0.5em;
     display: flex;
     align-items: center;
   }
-  
+
   .lang-select {
     padding: 0.25rem 0.5rem;
     margin-left: 1rem;
@@ -52,40 +52,23 @@
     border-radius: 0.25rem;
     cursor: pointer;
   }
-  
+
   .panel--from {
     grid-area: from;
   }
-  
+
   .panel--to {
     grid-area: to;
   }
-  
-  .swap {
-    align-self: center;
-    grid-area: swap;
-    font-size: 1.1rem;
-  }
-  
+
   #status {
     grid-area: status;
     text-align: center;
     align-self: center;
   }
-  
-  #versionBlock {
-    text-align: right;
-  }
-  
-  textarea {
-    padding: 1rem;
-    font-family: sans-serif;
-    font-size: 1rem;
-    resize: none;
-    border-radius: 2px;
-    border: 1px solid #ccc;
-  }
-  
+
+
+
   button {
     cursor: pointer;
     border: 1px solid #88c;
@@ -97,7 +80,16 @@
   button:hover {
     background: #cce;
   }
-  
-  #output {
-    background-color: #f4f4f4;
+
+  .translation {
+    color: black;
+    z-index: 9999;
+    font-size: 2.85em;
+    height: 95%;
+    margin: 50px;
+    padding: 25px;
+    background-color: #f8edc0;
+    border-radius: 8px;
+    box-shadow: 0 0 50px 50px #f8edc0ff;
+    overflow-y: scroll;
   }
